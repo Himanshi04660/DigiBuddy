@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigiBuddy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef6fc;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(to right, #4caf50, #7cb342);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #c8e6c9;
+    }
+
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .text-box {
+      max-width: 50%;
+    }
+
+    .text-box h2 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .text-box p {
+      color: #444;
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .image-box img {
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-section {
+      background-color: #e8f5e9;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .quote-section blockquote {
+      font-style: italic;
+      font-size: 1.3em;
+      color: #2e7d32;
+    }
+
+    .form-section,
+    .tutorial-section,
+    .chat-section {
+      background-color: white;
+      padding: 40px;
+      max-width: 800px;
+      margin: 40px auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .form-section h3,
+    .tutorial-section h3,
+    .chat-section h3 {
+      margin-bottom: 20px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #388e3c;
+    }
+
+    .chat-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+    }
+
+    .user-msg {
+      text-align: right;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .bot-msg {
+      text-align: left;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DigiBuddy</h1>
+    <p><em>Empowering Digital Literacy!</em></p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#chat">AI Chatbot</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="text-box">
+      <h2>Welcome to DigiBuddy</h2>
+      <p>Your friendly guide to mastering the digital world with ease and confidence.</p>
+      <p><strong>Why DigiBuddy?</strong></p>
+      <ul>
+        <li>Step-by-step tutorials for all ages</li>
+        <li>Ask anything — AI Chatbot is here 24/7</li>
+        <li>Explore, learn, and thrive in the digital age</li>
+      </ul>
+    </div>
+    <!-- <div class="image-box">
+      <img src="BG.png" alt="Digital Learning" />
+    </div> -->
+  </div>
+
+  <section class="quote-section">
+    <blockquote>"It’s never too late to learn. Let’s grow together in the digital age!"</blockquote>
+    <blockquote>"From WhatsApp to Google Maps, we’ve got you covered step-by-step."</blockquote>
+  </section>
+
+  <section id="tutorials" class="tutorial-section">
+    <!-- <h3>📚 Tutorials - Learn to Use Popular Apps</h3> -->
+    <div class="container">
+        <h2>📚 Tutorials - Learn to Use Popular Apps</h2>
+    
+        <button onclick="showTutorial('whatsapp')">WhatsApp</button>
+        <button onclick="showTutorial('google')">Google Maps</button>
+        <button onclick="showTutorial('facebook')">Facebook</button>
+        <button onclick="showTutorial('zoom')">Zoom</button>
+        <button onclick="showTutorial('paytm')">Paytm/UPI</button>
+    
+        <div id="whatsapp" class="tutorial">
+          <strong>WhatsApp - Step-by-Step Guide:</strong>
+          <ol>
+            <p>Open the WhatsApp app on your phone and learn how to to send a message, make calls, and create groups.</p>
+          </ol>
+          <a href="https://youtu.be/y3EdIiJeTXk?si=oUC9xjj6_qboUQN1" target="_blank">Watch WhatsApp Tutorial on YouTube</a>
+        </div>
+    
+        <div id="google" class="tutorial">
+          <strong>Google Maps:</strong>
+          <p>Find routes, get directions, and explore nearby places easily using Google Maps. Use voice search, real-time traffic, and satellite view.</p>
+          <a href="https://youtu.be/tui9hq9lfsU?si=3Cq7JgMCSo6Bq6Pk" target="_blank">Watch Google Maps Tutorial on YouTube</a>
+        </div>
+    
+        <div id="facebook" class="tutorial">
+          <strong>Facebook:</strong>
+          <p>Create a profile, post updates, and add friends. You can also join groups, like pages, and use Messenger to chat.</p>
+          <a href="https://youtu.be/hjbRBd-HbYY?si=gPCgWsSLBx_icC6v" target="_blank">Watch Facebook Tutorial on YouTube</a>
+        </div>
+    
+        <div id="zoom" class="tutorial">
+          <strong>Zoom:</strong>
+          <p>Join meetings, turn on/off mic and camera, and use screen share. Sign in to create or schedule meetings.</p>
+          <a href="https://youtu.be/fMUxzrgZvZQ?si=SBaVyQO_gnDJZHAE" target="_blank">Watch Zoom Tutorial on YouTube</a>
+        </div>
+    
+        <div id="paytm" class="tutorial">
+          <strong>Paytm/UPI:</strong>
+          <p>Make payments, check balances, and scan QR codes for transactions. Securely link your bank account to enable UPI.</p>
+          <a href="https://youtu.be/T32YRqpFzNk?si=-Y_Yt9UZVcJ-nTpE" target="_blank">Watch Paytm Tutorial on YouTube</a>
+        </div>
+      </div>
+    
+      <script>
+        function showTutorial(id) {
+          const tutorials = document.querySelectorAll('.tutorial');
+          tutorials.forEach(t => t.style.display = 'none');
+          document.getElementById(id).style.display = 'block';
+        }
+      </script>
+  </section>
+
+  <section id="chat" class="chat-section">
+    <h3>💬 Ask DigiBuddy (AI Chat)</h3>
+    <div class="chat-box" id="chatlog"></div>
+    <input type="text" id="userInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter'){sendMessage()}" />
+    <input type="button" value="Send" onclick="sendMessage()" />
+  </section>
+
+
+   <section id="feedback" class="form-section">
+    <h3>We'd love your feedback!</h3> 
+    <form onsubmit="handleSubmit(); return false;">
+    <label>Your Name:</label>
+    <input type="text" name="name" placeholder="Name" required />
+    <label>Your Email:</label>
+    <input type="email" name="email" placeholder="Email" required />
+    <label>Rate your experience (1-5):</label>
+    <input type="number" name="rating" min="1" max="5" required />
+    <label>Was DigiBuddy helpful?</label>
+    <select name="helpful">
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+    <label>Suggestions or problems:</label>
+    <textarea name="suggestions" rows="4" placeholder="Write here..."></textarea>
+    <input type="submit" value="Submit Feedback" />
+  </form>
+  
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
+      const chatlog = document.getElementById("chatlog");
+
+      const userMsg = document.createElement("div");
+      userMsg.className = "user-msg";
+      userMsg.innerText = "You: " + message;
+      chatlog.appendChild(userMsg);
+      input.value = "";
+
+      const botMsg = document.createElement("div");
+      botMsg.className = "bot-msg";
+      botMsg.innerText = "DigiBuddy: Thinking...";
+      chatlog.appendChild(botMsg);
+
+      // Simulated AI reply
+      setTimeout(() => {
+        botMsg.innerText = "DigiBuddy: " + generateAnswer(message);
+      }, 1000);
+    }
+
+    function generateAnswer(message) {
+      const lower = message.toLowerCase();
+      if (lower.includes("whatsapp")) return "To send a WhatsApp message, open the app, tap on a contact, type your message, and tap the send button.";
+      if (lower.includes("google maps")) return "Open Google Maps, search your destination, and tap 'Directions' to start navigation.";
+      if (lower.includes("facebook")) return "To post on Facebook, tap 'What's on your mind?', write your message, and click 'Post'.";
+      return "I'm here to help! Try asking about WhatsApp, Google Maps, Facebook, or any digital tool.";
+    }
+
+    function handleSubmit() {
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</body>
+</html>
+
